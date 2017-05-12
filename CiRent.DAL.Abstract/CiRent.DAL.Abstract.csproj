@@ -57,11 +57,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IContext.cs" />
+    <Compile Include="IRepositories\IGenericRepository.cs" />
+    <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CiRent.Entity\CiRent.Entity.csproj">
+      <Project>{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}</Project>
+      <Name>CiRent.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

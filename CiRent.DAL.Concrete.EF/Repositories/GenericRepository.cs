@@ -5,16 +5,18 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        private readonly IContext _context;
+        private readonly DAL.Abstract.IContext _context;
 
-        public GenericRepository(IContext context)
+        public GenericRepository(DAL.Abstract.IContext context)
         {
             _context = context;
         }

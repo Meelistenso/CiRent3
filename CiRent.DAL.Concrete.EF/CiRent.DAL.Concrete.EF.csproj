@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,12 +61,18 @@
     <Compile Include="CiRentContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CiRent.DAL.Abstract\CiRent.DAL.Abstract.csproj">
+      <Project>{A0907F97-9037-45F0-BD18-389E64836A28}</Project>
+      <Name>CiRent.DAL.Abstract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CiRent.Entity\CiRent.Entity.csproj">
       <Project>{cdc7b790-505d-4874-9eba-c96ebb94e3d1}</Project>
       <Name>CiRent.Entity</Name>

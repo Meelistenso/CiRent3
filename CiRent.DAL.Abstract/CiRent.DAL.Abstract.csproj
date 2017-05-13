@@ -59,6 +59,14 @@
   <ItemGroup>
     <Compile Include="IContext.cs" />
     <Compile Include="IRepositories\IGenericRepository.cs" />
+    <Compile Include="IRepositories\IProductInOrderRepository.cs" />
+    <Compile Include="IRepositories\IProductTypeRepository.cs" />
+    <Compile Include="IRepositories\IProductTypeDictionaryRepository.cs" />
+    <Compile Include="IRepositories\IProductValueRepository.cs" />
+    <Compile Include="IRepositories\IParamDictionaryRepository.cs" />
+    <Compile Include="IRepositories\IUserInRoleRepository.cs" />
+    <Compile Include="IRepositories\IRoleRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +79,9 @@
       <Project>{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}</Project>
       <Name>CiRent.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

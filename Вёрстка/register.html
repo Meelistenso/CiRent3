@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/site.css">
+	<link rel="stylesheet" type="text/css" href="style/accordion.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			resetMainCategry();
+			$("#close_profile_modal").click( function(){
+				$(".profile-modal").css("display", "none");
+			});
+			$("#open_profile_modal").click( function(){
+				$(".profile-modal").css("display", "flex");
+			});
+			$("#close_cart_modal").click( function(){
+				$(".cart-modal").css("display", "none");
+			});
+			$("#open_cart_modal").click( function(){
+				$(".cart-modal").css("display", "flex");
+			});
+			
+		});
+
+
+		function resetMainCategry(){
+			var height = parseFloat(document.documentElement.clientHeight) - parseFloat($("header").css("height"))+"px";
+			$(".form-holder").css("height", height);
+		}
+
+
+
+	</script>
+
+	<script type="text/javascript" src="js/accordion.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="modal profile-modal" style="display: none;">
+			<div class="modal-body">
+
+				<h2 class="modal-name">Edit profile</h2>
+				<button id="close_profile_modal" class="exit">x</button>
+
+				<div class="edit-profile">
+
+
+					<div class="change-image">
+						<img src="img/camera.jpg" alt="">
+						<form class="">
+							<label> Change profile photo</label>
+							<input type="file" name="">
+							<input type="submit" value=">" name="">
+						</form>
+					
+					</div>
+					<div class="change-profile-data">
+						<form class="change-name">
+
+							<label> Change uzername</label>
+							<input type="text" placeholder="Profile Name" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-password">
+
+							<label> Change password</label>
+							<input placeholder="Type password" type="password" name="">
+							<input placeholder="Conform password" type="password" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-phone">
+
+							<label>Change phone number</label>
+							<input placeholder="+380322228007" type="text" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-mail">
+
+							<label> Change e-mail</label>
+							<input placeholder="mail@example.com" type="e-mail" name="">
+							<input type="submit" value=">" name="">
+						</form>
+					</div>
+				</div>
+				<div class="orders">
+					<h1></h1>
+					<ul></ul>
+				</div>
+			</div><!-- modal-body -->
+		</div><!-- profile-modal -->
+
+		<div class="modal cart-modal" style="display: none;">
+			<div class="modal-body">
+
+				<button id="close_cart_modal" class="exit">x</button>
+				<h2 class="modal-name">Cart</h2>
+				<div class="cart-product-list-holder">
+					<ul class="cart-product-list">
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product namProduct nameProduct nameProduct nameProduct nameProduct nameProduct nameect nameProduct nameProduct nameProduct nameProduct nameProduct namee</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+					</ul>
+					</div><!--cart-product-list-holder-->
+				<span class="cart-total-price">228322$</span>
+				<button id="order_confirm">Confirm</button>
+			</div><!--modal-body-->
+		</div><!-- cart-modal -->
+		
+		<header>
+			<div class="header-content">
+				<div class="slogan-holder">
+					<h1 class="company-name-label">CiRent</h1>
+					<span class="company-name-label">Film equipment rental</span>
+				</div>
+				<div class="search-holder">
+					<input class="search" type="text" name="search"/>
+					<button><img src="img/search.svg" alt="Search"></button>
+				</div>
+				<div class="profile-button-holder">
+					<img src="img/profile_img.jpg" alt="">
+					<span>Profile Name</span>
+					<button id="open_profile_modal">
+						<img src="img/cog.svg" alt="">
+					</button>
+				</div>
+				<div class="cart-holder">
+					<button id="open_cart_modal" class="cart-button">
+						<span>10</span>
+					</button>
+					<span class="total-price">228322$</span>
+				</div>
+			</div><!-- header-content -->
+			<div class="nav-holder">
+				<ul class="menu nav-menu">
+					<li class="menu-item"><a href="#">Home</a></li>
+					<li class="menu-item"><a href="#">My orders</a></li>
+					<li class="menu-item"><a href="#">About us</a></li>
+					<li class="menu-item"><a href="#">Contacts</a></li>
+				</ul>
+			</div><!-- nav-holder -->
+		</header>
+
+
+
+		
+		<main class="product-page">
+			<div class="form-holder">
+				<form class="register-form">
+					<h3>Register</h3>
+					<span>Login</span>
+					<input type="text" name="">
+					<span>Contact phone</span>
+					<input type="tel" name="">
+					<span>Contact E-mail</span>
+					<input type="e-mail" name="">
+					<span>Password</span>
+					<input type="password" name="">
+					<span>Conform password</span>
+					<input type="password" name="">
+					<input type="submit" value="Send" name="">
+				</form>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

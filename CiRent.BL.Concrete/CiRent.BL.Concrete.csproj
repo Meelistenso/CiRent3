@@ -57,12 +57,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ProductsMapper.cs" />
+    <Compile Include="DataHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CiRent.BL.Entities\CiRent.BL.Entities.csproj">
+      <Project>{2A777979-BBE1-47F4-8E68-975447829F95}</Project>
+      <Name>CiRent.BL.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CiRent.Entity\CiRent.Entity.csproj">
+      <Project>{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}</Project>
+      <Name>CiRent.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

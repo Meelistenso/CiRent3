@@ -17,5 +17,9 @@ namespace CiRent.WebUi.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult _Categories()
+        {
+            return PartialView();
+        }
     }
 }

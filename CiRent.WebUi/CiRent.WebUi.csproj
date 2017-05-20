@@ -260,6 +260,9 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Partial\_ProfileModal.cshtml" />
     <Content Include="Views\Partial\_CartModal.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Partial\_Categories.cshtml" />
+    <Content Include="Views\Home\Item.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -273,6 +276,18 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CiRent.BL.Abstract\CiRent.BL.Abstract.csproj">
+      <Project>{4c7bb3dc-9e99-4b5f-97ee-adff9baf804b}</Project>
+      <Name>CiRent.BL.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CiRent.BL.Concrete\CiRent.BL.Concrete.csproj">
+      <Project>{a09fb8f4-557b-4b71-a63e-8a3fdfb70996}</Project>
+      <Name>CiRent.BL.Concrete</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CiRent.BL.Entities\CiRent.BL.Entities.csproj">
+      <Project>{2a777979-bbe1-47f4-8e68-975447829f95}</Project>
+      <Name>CiRent.BL.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CiRent.DAL.Abstract\CiRent.DAL.Abstract.csproj">
       <Project>{a0907f97-9037-45f0-bd18-389e64836a28}</Project>
       <Name>CiRent.DAL.Abstract</Name>

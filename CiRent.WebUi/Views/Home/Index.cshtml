@@ -1,6 +1,5 @@
-﻿@Styles.Render("~/Content/accordion")
-@{ Html.RenderAction("_CartModal", "Partial"); } 
-@{ Html.RenderAction("_ProfileModal", "Partial"); } 
+﻿@model IEnumerable<CiRent.BL.Entities.MainPageCategoryModel>
+@Styles.Render("~/Content/accordion")
 <script>
     $(window).resize(function () {
         resetMainCategry();
@@ -11,49 +10,17 @@
         $(".main-category-holder").css("height", height);
     }
 </script>
-<main>
-    <div class="main-category-holder">
-        <div class="main-category">
-            <img src="http://rmedia.com.ua/images/stories/kvadrokopter_4.jpg" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-        <div class="main-category">
-            <img src="http://rmedia.com.ua/images/stories/kvadrokopter_4.jpg" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-        <div class="main-category">
-            <img src="http://rmedia.com.ua/images/stories/kvadrokopter_4.jpg" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-        <div class="main-category">
-            <img src="#" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-        <div class="main-category">
-            <img src="#" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-        <div class="main-category">
-            <img src="#" alt="">
-            <div class="filter"></div>
-            <p class="main-category-description">
-                Category name
-            </p>
-        </div><!-- main-category -->
-    </div><!-- main-categories-holder -->
-</main>
+    @foreach (var item in Model)
+    {
+        <a href="~/Home/Category/@item.IdOfCategory">
+            <div class="main-category-holder">
+                <div class="main-category">
+                    <img src="~/Images/@item.PhotoPath" alt="">
+                    <div class="filter"></div>
+                    <p class="main-category-description">
+                        @item.NameOfCategory
+                    </p>
+                </div>
+            </div>
+        </a>
+    }

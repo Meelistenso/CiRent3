@@ -11,6 +11,11 @@ namespace CiRent.Entity
     [Table("tProduct")]
     public class Product
     {
+        public Product()
+        {
+            ProductTypes = new HashSet<ProductType>();
+            ProductInOrders = new HashSet<ProductInOrder>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("cId")]
@@ -20,5 +25,7 @@ namespace CiRent.Entity
         public decimal Price { get; set; }
         [Column("cProductQuantity")]
         public int ProductQuantity { get; set; }
+        public virtual ICollection<ProductType> ProductTypes { get; set; }
+        public virtual ICollection<ProductInOrder> ProductInOrders { get; set; }
     }
 }

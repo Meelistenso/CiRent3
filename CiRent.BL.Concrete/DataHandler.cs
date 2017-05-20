@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CiRent.BL.Concrete
 {
-    public class Class1
+    public class DataHandler
     {
+
     }
 }

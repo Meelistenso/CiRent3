@@ -26,5 +26,13 @@ namespace CiRent.WebUi.Controllers
 
             return View();
         }
+        public ActionResult Category (int id)
+        {
+            return View();
+        }
+        public ActionResult Item(int id)
+        {
+            return View();
+        }
     }
 }

@@ -22,10 +22,10 @@ namespace CiRent.Entity
         [Column("cTotalPrice")]
         public decimal TotalPrice { get; set; }
 
-        [Column("cIdUser")]
-        public int IdUser { get; set; }
-        [ForeignKey("IdUser")]
-        public virtual User User { get; set; }
+        //[Column("cIdUser")]
+        //public string IdUser { get; set; }
+        //[ForeignKey("IdUser")]
+        //public virtual User User { get; set; }
 
         [Column("cState")]
         public string State { get; set; }

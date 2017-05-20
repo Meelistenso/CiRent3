@@ -14,14 +14,14 @@ namespace CiRent.DAL.Concrete.EF.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        private readonly DAL.Abstract.IContext _context;
+        private readonly DAL.Abstract.ICiRentContext _context;
 
-        public GenericRepository(DAL.Abstract.IContext context)
+        public GenericRepository(DAL.Abstract.ICiRentContext context)
         {
             _context = context;
         }
 
-        public IContext Context
+        public ICiRentContext Context
         {
             get { return _context; }
         }

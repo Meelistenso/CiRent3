@@ -11,7 +11,7 @@ namespace CiRent.DAL.Concrete.EF.Repositories
 {
     public class ProductInOrderRepository : GenericRepository<ProductInOrder>, IProductInOrderRepository
     {
-        public ProductInOrderRepository(IContext context) : base(context)
+        public ProductInOrderRepository(ICiRentContext context) : base(context)
         {
 
         }

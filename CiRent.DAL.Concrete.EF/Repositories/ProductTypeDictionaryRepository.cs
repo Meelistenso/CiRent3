@@ -11,7 +11,7 @@ namespace CiRent.DAL.Concrete.EF.Repositories
 {
     public class ProductTypeDictionaryRepository : GenericRepository<ProductTypeDictionary>, IProductTypeDictionaryRepository
     {
-        public ProductTypeDictionaryRepository(IContext context) : base(context)
+        public ProductTypeDictionaryRepository(ICiRentContext context) : base(context)
         {
 
         }

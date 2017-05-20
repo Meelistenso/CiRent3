@@ -5,10 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CiRent.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using CiRent.DAL.Concrete.EF;
+using CiRent.DAL.Abstract;
+using System.Data.Entity.Infrastructure;
 
 namespace CiRent.DAL.Concrete.EF
 {
-    public class CiRentContext :DbContext, IDisposable
+    public class CiRentContext : IdentityDbContext<User>, ICiRentContext
     {
        public CiRentContext()
             :base("name=CiRentConnectionString") {
@@ -16,18 +20,35 @@ namespace CiRent.DAL.Concrete.EF
        }
 
          
-       IDbSet<Product> Product { get; set; }
-       IDbSet<Order> Order { get; set; }
-       IDbSet<ParamDictionary> ParamDictionary { get; set; }
-       IDbSet<ProductInOrder> ProductInOrder { get; set; }
-       IDbSet<ProductType> ProductType { get; set; }
-       IDbSet<ProductTypeDictionary> ProductTypeDictionary { get; set; }
-       IDbSet<ProductValue> ProductValue { get; set; }
-       IDbSet<Role> Role { get; set; }
-       IDbSet<User> User { get; set; }
-       IDbSet<UserInRole> UserInRole { get; set; }
+       public IDbSet<Product> Product { get; set; }
+       public IDbSet<Order> Order { get; set; }
+       public IDbSet<ParamDictionary> ParamDictionary { get; set; }
+       public IDbSet<ProductInOrder> ProductInOrder { get; set; }
+       public IDbSet<ProductType> ProductType { get; set; }
+       public IDbSet<ProductTypeDictionary> ProductTypeDictionary { get; set; }
+       public IDbSet<ProductValue> ProductValue { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelbuilder) { 
+        public IDbSet<TEntity> Set<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
+        }
+        public static CiRentContext Create()
+        {
+            return new CiRentContext();
+        }
+        public DbEntityEntry Entry(object entity)
+        {
+            return base.Entry(entity);
+        }
+
+        void IDisposable.Dispose()
+        {
+            base.Dispose();
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
         }
     }
 }

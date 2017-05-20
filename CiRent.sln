@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiRent.WebUi", "CiRent.WebUi\CiRent.WebUi.csproj", "{A3E84178-A0C7-434C-BDCB-9DE52C90AFF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiRent.Web.Rest", "CiRent.Web.Rest\CiRent.Web.Rest.csproj", "{AD3BBD5A-C966-4F0F-A21A-19F31FA5AA38}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiRent.Entity", "CiRent.Entity\CiRent.Entity.csproj", "{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiRent.DAL.Abstract", "CiRent.DAL.Abstract\CiRent.DAL.Abstract.csproj", "{A0907F97-9037-45F0-BD18-389E64836A28}"
@@ -31,10 +29,6 @@ Global
 		{A3E84178-A0C7-434C-BDCB-9DE52C90AFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3E84178-A0C7-434C-BDCB-9DE52C90AFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3E84178-A0C7-434C-BDCB-9DE52C90AFF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD3BBD5A-C966-4F0F-A21A-19F31FA5AA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD3BBD5A-C966-4F0F-A21A-19F31FA5AA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD3BBD5A-C966-4F0F-A21A-19F31FA5AA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD3BBD5A-C966-4F0F-A21A-19F31FA5AA38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU

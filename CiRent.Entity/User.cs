@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,19 +9,12 @@ using System.Threading.Tasks;
 
 namespace CiRent.Entity
 {
-    [Table("tUser")]
-    public partial class User
+    public class User : IdentityUser
     {
-
-        bool text = true;
-        User() {
-            this.UserInRole = new HashSet<UserInRole>();
+        public User()
+        {
+            Orders = new HashSet<Order>();
         }
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("cId")]
-        public int Id { get; set; }
-        public virtual ICollection<UserInRole> UserInRole { get; set; }
-
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

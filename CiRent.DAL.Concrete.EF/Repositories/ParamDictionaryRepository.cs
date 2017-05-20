@@ -11,7 +11,7 @@ namespace CiRent.DAL.Concrete.EF.Repositories
 {
     public class ParamDictionaryRepository : GenericRepository<ParamDictionary>, IParamDictionaryRepository
     {
-        public ParamDictionaryRepository(IContext context) : base(context)
+        public ParamDictionaryRepository(ICiRentContext context) : base(context)
         {
 
         }

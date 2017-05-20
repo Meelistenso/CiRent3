@@ -57,16 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IContext.cs" />
+    <Compile Include="ICiRentContext.cs" />
     <Compile Include="IRepositories\IGenericRepository.cs" />
     <Compile Include="IRepositories\IProductInOrderRepository.cs" />
     <Compile Include="IRepositories\IProductTypeRepository.cs" />
     <Compile Include="IRepositories\IProductTypeDictionaryRepository.cs" />
     <Compile Include="IRepositories\IProductValueRepository.cs" />
     <Compile Include="IRepositories\IParamDictionaryRepository.cs" />
-    <Compile Include="IRepositories\IUserInRoleRepository.cs" />
-    <Compile Include="IRepositories\IRoleRepository.cs" />
-    <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

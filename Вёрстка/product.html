@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/site.css">
+	<link rel="stylesheet" type="text/css" href="style/accordion.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#close_profile_modal").click( function(){
+				$(".profile-modal").css("display", "none");
+			});
+			$("#open_profile_modal").click( function(){
+				$(".profile-modal").css("display", "flex");
+			});
+			$("#close_cart_modal").click( function(){
+				$(".cart-modal").css("display", "none");
+			});
+			$("#open_cart_modal").click( function(){
+				$(".cart-modal").css("display", "flex");
+			});
+
+			$("#sort_by_name").click(function(){
+				if($("#sort_by_name").hasClass("sel-up")){
+					$("#sort_by_name").removeClass("sel-up");
+					$("#sort_by_name").addClass("sel-down");
+				}else{
+					$("#sort_by_name").removeClass("sel-down");
+					$("#sort_by_name").addClass("sel-up");
+				}
+				$("#sort_by_price").removeClass("sel-up");
+				$("#sort_by_price").removeClass("sel-down");
+			});
+			$("#sort_by_price").click(function(){
+				if($("#sort_by_price").hasClass("sel-up")){
+					$("#sort_by_price").removeClass("sel-up");
+					$("#sort_by_price").addClass("sel-down");
+				}else{
+					$("#sort_by_price").removeClass("sel-down");
+					$("#sort_by_price").addClass("sel-up");
+				}
+				$("#sort_by_name").removeClass("sel-up");
+				$("#sort_by_name").removeClass("sel-down");
+			});
+			
+		});
+
+
+
+	</script>
+
+	<script type="text/javascript" src="js/accordion.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="modal profile-modal" style="display: none;">
+			<div class="modal-body">
+
+				<h2 class="modal-name">Edit profile</h2>
+				<button id="close_profile_modal" class="exit">x</button>
+
+				<div class="edit-profile">
+
+
+					<div class="change-image">
+						<img src="img/camera.jpg" alt="">
+						<form class="">
+							<label> Change profile photo</label>
+							<input type="file" name="">
+							<input type="submit" value=">" name="">
+						</form>
+					
+					</div>
+					<div class="change-profile-data">
+						<form class="change-name">
+
+							<label> Change uzername</label>
+							<input type="text" placeholder="Profile Name" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-password">
+
+							<label> Change password</label>
+							<input placeholder="Type password" type="password" name="">
+							<input placeholder="Conform password" type="password" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-phone">
+
+							<label>Change phone number</label>
+							<input placeholder="+380322228007" type="text" name="">
+							<input type="submit" value=">" name="">
+						</form>
+						<form class="change-mail">
+
+							<label> Change e-mail</label>
+							<input placeholder="mail@example.com" type="e-mail" name="">
+							<input type="submit" value=">" name="">
+						</form>
+					</div>
+				</div>
+				<div class="orders">
+					<h1></h1>
+					<ul></ul>
+				</div>
+			</div><!-- modal-body -->
+		</div><!-- profile-modal -->
+
+		<div class="modal cart-modal" style="display: none;">
+			<div class="modal-body">
+
+				<button id="close_cart_modal" class="exit">x</button>
+				<h2 class="modal-name">Cart</h2>
+				<div class="cart-product-list-holder">
+					<ul class="cart-product-list">
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product namProduct nameProduct nameProduct nameProduct nameProduct nameProduct nameect nameProduct nameProduct nameProduct nameProduct nameProduct namee</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+						<li class="cart-product">
+							<img class="cart-img" src="img/camera.jpg" alt="">
+							<span class="cart-count">X2</span>
+							<span class="cart-name">Product name</span>
+							<span class="rent-dates">01.01.2001 - 31.12.2017</span>
+							<span class="rent-price">28322$</span>
+
+							<button class="remove-item">X</button>
+						</li>
+					</ul>
+					</div><!--cart-product-list-holder-->
+				<span class="cart-total-price">228322$</span>
+				<button id="order_confirm">Confirm</button>
+			</div><!--modal-body-->
+		</div><!-- cart-modal -->
+		
+		<header>
+			<div class="header-content">
+				<div class="slogan-holder">
+					<h1 class="company-name-label">CiRent</h1>
+					<span class="company-name-label">Film equipment rental</span>
+				</div>
+				<div class="search-holder">
+					<input class="search" type="text" name="search"/>
+					<button><img src="img/search.svg" alt="Search"></button>
+				</div>
+				<div class="profile-button-holder">
+					<img src="img/profile_img.jpg" alt="">
+					<span>Profile Name</span>
+					<button id="open_profile_modal">
+						<img src="img/cog.svg" alt="">
+					</button>
+				</div>
+				<div class="cart-holder">
+					<button id="open_cart_modal" class="cart-button">
+						<span>10</span>
+					</button>
+					<span class="total-price">228322$</span>
+				</div>
+			</div><!-- header-content -->
+			<div class="nav-holder">
+				<ul class="menu nav-menu">
+					<li class="menu-item"><a href="#">Home</a></li>
+					<li class="menu-item"><a href="#">My orders</a></li>
+					<li class="menu-item"><a href="#">About us</a></li>
+					<li class="menu-item"><a href="#">Contacts</a></li>
+				</ul>
+			</div><!-- nav-holder -->
+		</header>
+
+
+
+		
+		<main class="product-page">
+			<div class="product-info">
+				<h4 class="product-name">Product name</h4>
+				<div class="product-container">
+					<div class="product-left">
+						<img class="product-img" src="img/camera.jpg" alt="">
+					</div>
+					<div class="product-right">
+						<form class="add-to-cart-form">
+							<h3 class="add-to-cart-label">Select rent period</h5>
+							<span class="rent-label">Rent beginning:</span>
+							<input class="rent-date" type="date" name=""> 
+							<span class="rent-label">Rent ending:</span>
+							<input class="rent-date" type="date" name="">
+							<input type="submit" value="Add to cart" name="">
+						</form>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam qui totam doloremque harum quod, rem recusandae suscipit id sit quos iste, inventore ipsum sapiente provident vero doloribus cumque, corporis molestias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus praesentium ullam rem, perferendis animi dolores, provident nesciunt iusto expedita, ad ut, sit necessitatibus totam tenetur esse nemo. Provident, assumenda voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quaerat non iste quod debitis eligendi minima consequatur delectus. Fugiat quasi cupiditate, nemo magnam necessitatibus sit minus nihil iusto dolorem numquam.</p>
+					</div>
+				</div>
+			</div>
+			<div class="see-also-holder accordion-container">
+				
+
+				<div class="set">
+						<a href="#">
+							<span class="order-date"> See also </span>
+						</a>
+						<div class="content">
+													<div class="product-list">
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>50</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long</span>
+															<span class="product-link-price">228<sup>50</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long</span>
+															<span class="product-link-price">228<sup>40</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>30</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>20</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product nameLong long product name</span>
+															<span class="product-link-price">228<sup>20</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>50</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long</span>
+															<span class="product-link-price">228<sup>--</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>--</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product nameLong long product nameLong long product name</span>
+															<span class="product-link-price">228<sup>10</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>--</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>00</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>00</sup>$</span>
+														</div>
+														<div class="product-link">
+															<img src="img/camera.jpg" alt="">
+															<span class="product-link-name">Long long product name</span>
+															<span class="product-link-price">228<sup>00</sup>$</span>
+														</div>
+													</div><!--product-list-->
+
+						</div><!-- content -->
+					</div><!-- set -->
+
+				
+			</div>		
+		</main>
+	</div>
+</body>
+</html>

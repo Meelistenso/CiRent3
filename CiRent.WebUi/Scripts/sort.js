@@ -1,0 +1,22 @@
+$("#sort_by_name").click(function(){
+				if($("#sort_by_name").hasClass("sel-up")){
+					$("#sort_by_name").removeClass("sel-up");
+					$("#sort_by_name").addClass("sel-down");
+				}else{
+					$("#sort_by_name").removeClass("sel-down");
+					$("#sort_by_name").addClass("sel-up");
+				}
+				$("#sort_by_price").removeClass("sel-up");
+				$("#sort_by_price").removeClass("sel-down");
+			});
+			$("#sort_by_price").click(function(){
+				if($("#sort_by_price").hasClass("sel-up")){
+					$("#sort_by_price").removeClass("sel-up");
+					$("#sort_by_price").addClass("sel-down");
+				}else{
+					$("#sort_by_price").removeClass("sel-down");
+					$("#sort_by_price").addClass("sel-up");
+				}
+				$("#sort_by_name").removeClass("sel-up");
+				$("#sort_by_name").removeClass("sel-down");
+			});

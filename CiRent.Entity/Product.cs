@@ -18,5 +18,7 @@ namespace CiRent.Entity
 
         [Column("cPrice")]
         public decimal Price { get; set; }
-     }
+        [Column("cProductQuantity")]
+        public int ProductQuantity { get; set; }
+    }
 }

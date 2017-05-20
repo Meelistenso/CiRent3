@@ -4,40 +4,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    
+    <header>
+        <div class="header-content">
+            <div class="slogan-holder">
+                <h1 class="company-name-label">CiRent</h1>
+                <span class="company-name-label">Film equipment rental</span>
+            </div>
+            <div class="search-holder">
+                <input class="search" type="text" name="search" />
+                <button><img src="~/Images/search.svg" alt="Search"></button>
+            </div>
+            <div class="profile-button-holder">
+                <img src="~/Images/profile_img.jpg" alt="">
+                <span>Profile Name</span>
+                <button id="open_profile_modal">
+                    <img src="~/Images/cog.svg" alt="">
                 </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
-                </ul>
+            <div class="cart-holder">
+                <button id="open_cart_modal" class="cart-button">
+                    <span>10</span>
+                </button>
+                <span class="total-price">228322$</span>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
+        </div><!-- header-content -->
+        <div class="nav-holder">
+            <ul class="menu nav-menu">
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a href="#">My orders</a></li>
+                <li class="menu-item"><a href="#">About us</a></li>
+                <li class="menu-item"><a href="#">Contacts</a></li>
+            </ul>
+        </div><!-- nav-holder -->
+    </header>
+
+    <div class="wrapper">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -61,11 +61,13 @@
     <Compile Include="IRepositories\IGenericRepository.cs" />
     <Compile Include="IRepositories\IRepositoryHolder.cs" />
     <Compile Include="IRepositories\IProductInOrderRepository.cs" />
-    <Compile Include="IRepositories\IProductTypeRepository.cs" />
-    <Compile Include="IRepositories\IProductTypeDictionaryRepository.cs" />
-    <Compile Include="IRepositories\IProductValueRepository.cs" />
-    <Compile Include="IRepositories\IParamDictionaryRepository.cs" />
+    <Compile Include="IRepositories\IEnumTypeRepository.cs" />
+    <Compile Include="IRepositories\IEnumValueRepository.cs" />
+    <Compile Include="IRepositories\ICategoryRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
+    <Compile Include="IRepositories\IRoleRepository.cs" />
+    <Compile Include="IRepositories\IOrderRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

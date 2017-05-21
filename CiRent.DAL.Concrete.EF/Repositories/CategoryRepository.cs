@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
-    //public class ProductTypeRepository : GenericRepository<ProductType>, IProductTypeRepository
-    //{
-    //    public ProductTypeRepository(ICiRentContext context) : base(context)
-    //    {
+    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
+    {
+        public CategoryRepository(ICiRentContext context) : base(context)
+        {
 
-    //    }
-    //}
+        }
+    }
 }

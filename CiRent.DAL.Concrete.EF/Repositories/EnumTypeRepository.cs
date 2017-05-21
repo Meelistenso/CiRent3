@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
-    public class ParamDictionaryRepository : GenericRepository<Category>, IParamDictionaryRepository
+    public class EnumTypeRepository : GenericRepository<EnumType>, IEnumTypeRepository
     {
-        public ParamDictionaryRepository(ICiRentContext context) : base(context)
+        public EnumTypeRepository(ICiRentContext context) : base(context)
         {
 
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CiRent.Entity;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
@@ -11,7 +12,15 @@ namespace CiRent.DAL.Abstract.IRepositories
     {
         ICiRentContext Context { get; }
         IProductRepository ProductRepository { get; }
-        
+        IUserRepository UserRepository { get; }
+        IRoleRepository RoleRepository { get; }
+        IOrderRepository OrderRepository { get; }
+        IProductInOrderRepository ProductInOrderRepository { get; }
+        ICategoryRepository CategoryRepository { get; }
+        IEnumTypeRepository EnumTypeRepository { get; }
+        IEnumValueRepository EnumValueRepository { get; }
+
         void SaveChanges();
+
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using CiRent.Entity;
+﻿using CiRent.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
-    public interface IParamDictionaryRepository : IGenericRepository<Category>
+    public interface IOrderRepository : IGenericRepository<Order>
     {
     }
 }

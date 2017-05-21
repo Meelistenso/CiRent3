@@ -39,7 +39,6 @@ namespace CiRent.WebUi.Controllers
         //}
         public async Task<ActionResult> Category(int id,int? page,string sorted)
         {
-            ViewData["Head"] = id;
             DataHandler res = new DataHandler();
             List<ProductsModel> result;
             
@@ -62,6 +61,12 @@ namespace CiRent.WebUi.Controllers
             var result = await res.BindProduct(id);
             return View(result);
 
+        }
+        public async Task<ActionResult> Search(string text)
+        {
+            DataHandler res = new DataHandler();
+            var result = await res.BindProducts(text);
+            return View(result);
         }
     }
 }

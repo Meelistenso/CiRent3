@@ -1,4 +1,5 @@
 ﻿using CiRent.BL.Concrete;
+using CiRent.BL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,9 @@ using System.Web.Mvc;
 
 namespace CiRent.WebUi.Controllers
 {
+    /// <summary>
+    /// http://stackoverflow.com/questions/5095183/how-would-i-run-an-async-taskt-method-synchronously
+    /// </summary>
     public class PartialController : Controller
     {
         // GET: Partial
@@ -19,11 +23,10 @@ namespace CiRent.WebUi.Controllers
         {
             return PartialView();
         }
-        public async Task<PartialViewResult> _Categories(int id)
+        public  PartialViewResult _Categories(int id)
         {
             DataHandler c = new DataHandler();
-            var res= await c.BindSideBarCategories(id);
-            return PartialView(res);
+            return PartialView(c.BindSideBarCategories(id).GetAwaiter());
         }
     }
 }

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<CiRent.BL.Entities.ProductsModel>
+<div class="product-list">
+    @foreach (var item in Model)
+    {
+        <a href="~/Home/Item/@item.IdOfItem">
+            <div class="product-link">
+                <img src="~/Images/Products/@item.PhotoPath" alt="">
+                <span class="product-link-name">@item.NameOfItem</span>
+                <span class="product-link-price">@item.BigPrice<sup>@item.SmallPrice</sup>$</span>
+            </div>
+        </a>
+    }
+</div>

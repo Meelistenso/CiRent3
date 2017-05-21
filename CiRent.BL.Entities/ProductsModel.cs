@@ -9,6 +9,7 @@ namespace CiRent.BL.Entities
     public class ProductsModel
     {
         //category model for items
+        public int Id { get; set; }
         public string PhotoPath { get; set; }
         public int IdOfItem { get; set; }
         public string NameOfItem { get; set; }

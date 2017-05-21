@@ -27,24 +27,30 @@ namespace CiRent.BL.Concrete
             switch (sorted)
             {
                 case "name":
-                    return mapper.EntityToModel(res.OrderBy(p => p.Name).Take(12).ToList());
+                    return mapper.EntityToModel(res.OrderBy(p => p.Name).Take(12).ToList(),categoryId);
                 case "price":
-                    return mapper.EntityToModel(res.OrderBy(p => p.Price).Take(12).ToList());
+                    return mapper.EntityToModel(res.OrderBy(p => p.Price).Take(12).ToList(),categoryId);
                 default:
-                    return mapper.EntityToModel(res.Take(12).ToList());
+                    return mapper.EntityToModel(res.Take(12).ToList(),categoryId);
             }
+        }
+        public async Task<List<ProductsModel>> BindProducts(string text)
+        {
+            ProductsMapper mapper = new ProductsMapper();
+            var res = await scope.ProductRepository.FetchByAsync(p => p.Name.Contains(text));
+            return mapper.EntityToModel(res.Take(12).ToList());
         }
         public async Task<List<ProductsModel>> BindProducts(int categoryId,int page)
         {
             ProductsMapper mapper = new ProductsMapper();
             var res = await scope.ProductRepository.FetchByAsync(p => p.IdCategory == categoryId);
-            return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList());
+            return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList(), categoryId);
         }
         public async Task<List<ProductsModel>> BindProducts(int ParentCategoryId)
         {
             ProductsMapper mapper = new ProductsMapper();
             var res = await scope.CategoryRepository.FetchByAsync(p=>p.ParentId == ParentCategoryId);
-            return mapper.EntityToModel(res.Take(12).ToList());
+            return mapper.EntityToModel(res.Take(12).ToList(), ParentCategoryId);
         }
         public async Task<List<ProductsModel>> BindProducts(int categoryId, int page, string orderby)
         {
@@ -53,11 +59,11 @@ namespace CiRent.BL.Concrete
             res = await scope.ProductRepository.FetchByAsync(p => p.IdCategory == categoryId);
             switch (orderby) {
                 case "name":
-                    return mapper.EntityToModel(res.OrderBy(p=>p.Name).Skip(page * 12).Take(12).ToList());
+                    return mapper.EntityToModel(res.OrderBy(p=>p.Name).Skip(page * 12).Take(12).ToList(), categoryId);
                 case "price":
-                    return mapper.EntityToModel(res.OrderBy(p=>p.Price).Skip(page * 12).Take(12).ToList());
+                    return mapper.EntityToModel(res.OrderBy(p=>p.Price).Skip(page * 12).Take(12).ToList(), categoryId);
                 default:
-                    return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList());
+                    return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList(), categoryId);
             }
         }
         public async Task<ProductModel> BindProduct(int productId)

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CiRent.BL.Entities
 {
-    public class CategoriesSideBarModel
+    public class ProductCategoryModel
     {
-        public int IdOfCtegory { get; set; }
-        public string CategoryName { get; set; } 
+        public List<SidebarCategoriesModel> Category { get; set; }
+        public List<ProductsModel> Items { get; set; }
     }
 }

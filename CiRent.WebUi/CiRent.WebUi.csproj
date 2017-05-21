@@ -267,6 +267,7 @@
     <Content Include="Views\Partial\_Categories.cshtml" />
     <Content Include="Views\Home\Item.cshtml" />
     <Content Include="Views\Admin\Order.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

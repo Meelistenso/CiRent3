@@ -1,7 +1,18 @@
-﻿@model IEnumerable<CiRent.BL.Entities.ProductsModel>
-@{ Html.RenderAction("_Categories", "Partial", new { id= ViewData["Head"] });}
+﻿@model CiRent.BL.Entities.ProductCategoryModel
+<div class="sidebar">
+    <button id="sort_by_price" class="sort"><span>Sort by price</span><img src="img/triangle.svg" alt=""></button>
+
+    <button id="sort_by_name" class="sort"><span>Sort by name</span><img src="img/triangle.svg" alt=""></button>
+
+    <ul class="categories">
+        @foreach (var item in Model.Category)
+        {
+            <a href="~/Home/category/@item.Id?page=0"><li class="category">@item.Name<img src="~/Images/checked.svg" alt=""></li></a>
+        }
+    </ul>
+</div>
 <div class="product-list">
-    @foreach (var item in Model)
+    @foreach (var item in Model.Items)
     {
         <a href="~/Home/Item/@item.IdOfItem">
             <div class="product-link">

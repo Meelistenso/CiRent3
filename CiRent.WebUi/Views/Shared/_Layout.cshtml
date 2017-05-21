@@ -20,10 +20,10 @@
                 <h1 class="company-name-label">CiRent</h1>
                 <span class="company-name-label">Film equipment rental</span>
             </div>
-            <div class="search-holder">
-                <input class="search" type="text" name="search" />
-                <button><img src="~/Images/search.svg" alt="Search"></button>
-            </div>
+            <form class="search-holder" action="~/Home/Search">
+                <input class="search" type="text" name="text" />
+                <button type="submit"><img src="~/Images/search.svg" alt="Search"></button>
+            </form>
             <div class="profile-button-holder">
                 <img src="~/Images/profile_img.jpg" alt="">
                 <span>Profile Name</span>

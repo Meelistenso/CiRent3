@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace RKE.WebUI.Models
+namespace CiRent.WebUi.Models
 {
     public class RegisterModel
     {
@@ -14,6 +14,8 @@ namespace RKE.WebUI.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        public string UserName { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
 

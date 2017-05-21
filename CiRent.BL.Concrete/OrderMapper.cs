@@ -20,6 +20,7 @@ namespace CiRent.BL.Concrete
                 c.TotalPrice = item.TotalPrice;
                 c.State = item.State;
                 c.TotalItems = c.OrdersModel.Count();
+                c.Date = item.Date;
                 res.Add(c);
             }
             return res;

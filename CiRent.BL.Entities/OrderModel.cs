@@ -10,6 +10,7 @@ namespace CiRent.BL.Entities
     {
         public decimal TotalPrice { get; set; }
         public string State { get; set; }
+        public DateTime Date{ get; set; }
         public int TotalItems { get; set; }
         public List<OrdersModel> OrdersModel { get; set; }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace RKE.WebUI.Models
+namespace CiRent.WebUi.Models
 {
     public class EditModel
     {

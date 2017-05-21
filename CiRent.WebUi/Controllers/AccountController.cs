@@ -5,13 +5,13 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using RKE.WebUI.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Host.SystemWeb;
 using Microsoft.Owin.Security;
 using CiRent.IDEntity;
 using CiRent.Entity;
+using CiRent.WebUi.Models;
 
 namespace CiRent.WebUi.Controllers
 {
@@ -33,7 +33,7 @@ namespace CiRent.WebUi.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { UserName = model.Email, Email = model.Email,PhoneNumber=model.PhoneNumber };
+                User user = new User { UserName = model.UserName, Email = model.Email,PhoneNumber=model.PhoneNumber };
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

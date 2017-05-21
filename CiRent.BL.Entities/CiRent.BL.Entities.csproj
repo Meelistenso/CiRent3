@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminOrderModel.cs" />
+    <Compile Include="AdminOrdersModel.cs" />
     <Compile Include="OrderModel.cs" />
     <Compile Include="CartModel.cs" />
     <Compile Include="OrdersModel.cs" />

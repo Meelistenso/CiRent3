@@ -34,6 +34,10 @@ namespace CiRent.Entity
         [Column("cState")]
         public string State { get; set; }
 
+        [Column("cDateCreation")]
+        public DateTime Date { get; set; }
+
+
         public  virtual ICollection<ProductsInOrder> ProductsInOrder { get; set; }
 
     }

@@ -17,7 +17,7 @@ namespace CiRent.BL.Concrete
             {
                 ProductsModel pm = new ProductsModel();
                     pm.BigPrice = (int)item.Price;
-                    pm.SmallPrice = (int)(item.Price - pm.BigPrice) * pm.BigPrice.ToString().Length;
+                    pm.SmallPrice = (int)(((item.Price)- pm.BigPrice) *100);
                     pm.PhotoPath = item.PhotoPath;
                     pm.NameOfItem = item.Name;
                     pm.IdOfItem = item.Id;

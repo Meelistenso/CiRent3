@@ -11,6 +11,7 @@ namespace CiRent.DAL.Abstract.IRepositories
     {
         ICiRentContext Context { get; }
         IProductRepository ProductRepository { get; }
+        
         void SaveChanges();
     }
 }

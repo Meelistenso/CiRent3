@@ -1,4 +1,5 @@
 ﻿using CiRent.BL.Concrete;
+using CiRent.BL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,15 +29,20 @@ namespace CiRent.WebUi.Controllers
 
             return View();
         }
-        public ActionResult Category (int id)
-        {
-            return View();
-        }
-        public async Task<ActionResult> Item(int id)
+        
+        public async Task<ActionResult> Category(int id,string page,string sorted)
         {
             DataHandler res = new DataHandler();
-            var result = await res.BindProduct(id);
-            return View(result);
+            List<ProductsModel> result;
+            if (page!="") {
+                 result = await res.BindProducts(id, int.Parse(page),sorted);
+            }
+            else
+            {
+                 result = await res.BindProducts(id,sorted);
+            }
+            
+            return View("Category",result);
         }
     }
 }

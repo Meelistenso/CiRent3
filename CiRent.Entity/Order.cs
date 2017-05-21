@@ -11,6 +11,10 @@ namespace CiRent.Entity
     [Table("tOrder")]
     public class Order
     {
+        public Order()
+        {
+            ProductsInOrder = new HashSet<ProductsInOrder>();
+        }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("cId")]
@@ -29,5 +33,7 @@ namespace CiRent.Entity
 
         [Column("cState")]
         public string State { get; set; }
+
+        public  virtual ICollection<ProductsInOrder> ProductsInOrder { get; set; }
     }
 }

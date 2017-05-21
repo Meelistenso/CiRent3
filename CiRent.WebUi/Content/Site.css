@@ -28,12 +28,18 @@ html,body{
 	background: black;
 }
 	.menu-item{
-
+			line-height: 25px;
 			margin:0 16px; 
+			margin-top: -2px;
+			height: 25px;
+			font-size: 16px;
 	}
 	.menu-item a{
 		text-decoration: none;
 		color: #ccc;
+		line-height: 25px;
+		height: 25px;
+	
 	}
 	.menu-item a:hover{
 		color: white;
@@ -54,7 +60,7 @@ html,body{
 	display: flex;
 	flex-wrap: nowrap;
 	flex-grow: 1;
-	height: 20px;
+	height: 25px;
 
 	box-shadow: 0px 2px 5px 0px #ccc;
 }
@@ -83,6 +89,7 @@ main{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
+	min-height: 350px !important;
 }
 	.main-category{
 		flex-basis: 30%;
@@ -143,7 +150,7 @@ main{
 	height: 100%;
 	width: 100%;
 	background: none;
-	background:  url("/Images/cart.svg");
+	background:  url("../img/cart.svg");
 	background-size: 20px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -560,6 +567,169 @@ button.exit{
 .order-status{
 	text-align: right;
 	flex-grow: 1;
+}
+.product-page{
+	display: flex;
+	flex-direction: column;
+
+}
+.product-img{
+	width: 100%;
+}
+.product-left{
+	min-width: 200px;
+	width: 30%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: 5%;
+}
+.product-right{
+	flex-grow: 1;
+}
+.product-info{
+
+}
+.product-container{
+	display: flex;
+	flex-direction: row;
+}
+.add-to-cart-label{
+	font-weight: 100;
+	font-size: 20px;
+	color: black;
+	font-family: Times;
+}
+.rent-date{
+	border:2px solid black;
+	border-left: 0;
+	height: 25px;
+	line-height: 25px;
+	padding: 0;
+	display: block;
+	clear: right;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	padding-left: 5px;
+	width: 150px;
+}
+.rent-label{
+	border:2px solid black;
+	width: 120px;
+	clear: left;
+	padding: 0;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	background: black;
+	color: white;
+	display: block;
+	float: left;
+	border-right: 1px solid black;
+	font-size: 16px;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	box-sizing: border-box;
+	font-family: Myriad Pro;
+}
+.add-to-cart-form input[type="submit"]{
+	border:0;
+	background: black;
+	color: white;
+	margin-left: 120px;
+	font-size: 18px;
+	height: 25px;
+	line-height: 25px;
+	padding: 1px 10px;
+	cursor: pointer;
+	width: 150px;
+
+}
+.add-to-cart-label{
+	margin:0 0 5px 0;
+	font-family: Times;
+	font-size: 20px;
+	clear: left;
+}
+.add-to-cart-form{
+	font-size: 0;
+}
+.product-name{
+	font-family: Myriad Pro;
+	font-weight: 500;
+	font-size: 26px;
+	margin:  30px 0 10px 0;
+}
+.product-description{
+	margin-top: 25px;
+	font-family: verdana;
+}
+.form-holder{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: auto;
+}
+.form-holder form{
+	display: inline-block;
+}
+.form-holder form h3{
+	font-size: 24px;
+	display:block;
+	clear: both;
+	margin: 0 0 10px 0;
+
+}
+.form-holder form span{
+	display: block;
+	float: left;
+	width: 135px;
+	background: black;
+	color: white;
+	padding-left: 5px;
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 10px;
+	font-family: Myriad Pro;
+}
+.form-holder form input{
+	border:2px solid black;
+	height: 25px;
+	display: block;
+	clear: right;
+	padding-left: 5px;
+	width: 150px;
+
+	margin-bottom: 10px;
+}
+.form-holder form input[type="submit"]{
+	border:0;
+	background: black;
+	color: white;
+	font-size: 18px;
+	height: 25px;
+	line-height: 25px;
+	padding: 1px 10px;
+	cursor: pointer;
+	width: 148px;
+	float: right;
+}
+.product-price{
+	font-family: Myriad Pro;
+	font-weight: bold;
+	font-size: 24px;
+	float: left;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 2590px) and (min-width: 1301px){
+	header,main{
+		padding: 0 20%;
+	}
+	.main-category{
+		height: 200px;
+	}
+
 }
 @media screen and (max-width: 1300px) {
 	header,main{

@@ -193,6 +193,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
@@ -218,6 +219,7 @@
     <Content Include="Images\cart_black.svg" />
     <Content Include="Images\checked.svg" />
     <Content Include="Images\cog.svg" />
+    <Content Include="Images\Products\1.jpg" />
     <Content Include="Images\profile_img.jpg" />
     <Content Include="Images\search.svg" />
     <Content Include="Images\search_black.svg" />
@@ -263,9 +265,12 @@
     <Content Include="Views\Home\Category.cshtml" />
     <Content Include="Views\Partial\_Categories.cshtml" />
     <Content Include="Views\Home\Item.cshtml" />
+    <Content Include="Views\Admin\Cart.cshtml" />
+    <Content Include="Views\Admin\Order.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Categories\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

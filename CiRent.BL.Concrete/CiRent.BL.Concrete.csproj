@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartMapper.cs" />
+    <Compile Include="CartsMapper.cs" />
+    <Compile Include="OrderMapper.cs" />
+    <Compile Include="OrdersMapper.cs" />
     <Compile Include="ProductMapper.cs" />
     <Compile Include="ProductsMapper.cs" />
     <Compile Include="DataHandler.cs" />

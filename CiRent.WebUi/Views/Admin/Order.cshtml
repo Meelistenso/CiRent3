@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CiRent.BL.Entities.OrderModel>
+<div class="orders-list">
+
+    <div class="accordion-container">
+        <h2>Orders</h2>
+        @foreach (var item in Model)
+        {
+            <div class="set">
+                <a href="#">
+                    @*<span class="order-date">@item. </span>*@
+                    <span class="order-product-count">@item.TotalItems</span>
+                    <span class="order-price">@item.TotalPrice</span>
+                    <span class="order-status">@item.State</span>
+                </a>
+                <div class="content">
+                    <ul class="cart-product-list">
+                        @foreach(var item2 in item.OrdersModel) { 
+                            <li class="cart-product">
+                                <img class="cart-img" src="~/Images/Products/@item2.PhotoPath" alt="">
+                                @*<span class="cart-count">X2</span>*@
+                                <span class="cart-name">@item2.ProductName</span>
+                                <span class="rent-dates">@item2.StartDate.ToShortDateString() - @item2.EndDate.ToShortDateString()</span>
+                                <span class="rent-price">@item.TotalPrice</span>
+                            </li>
+                        }
+                    </ul>
+                </div><!-- content -->
+            </div><!-- set -->
+        }
+        
+
+    </div>
+</div>

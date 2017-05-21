@@ -26,8 +26,8 @@ namespace CiRent.Entity
         //[ForeignKey("IdType")]
         //public virtual ProductTypeDictionary ProductTypeDictionary { get; set; }
 
-        [Column("cChildId")]
-        public int ParamId { get; set; }
+        [Column("cParamId")]
+        public int? ParamId { get; set; }
         [ForeignKey("ParamId")]
         public virtual ICollection<Category> Child { get; set; }
     }

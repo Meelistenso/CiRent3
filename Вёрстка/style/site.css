@@ -615,7 +615,7 @@ button.exit{
 .rent-label{
 	border:2px solid black;
 	width: 120px;
-
+	clear: left;
 	padding: 0;
 	padding-left: 5px;
 	margin-bottom: 5px;
@@ -648,6 +648,7 @@ button.exit{
 	margin:0 0 5px 0;
 	font-family: Times;
 	font-size: 20px;
+	clear: left;
 }
 .add-to-cart-form{
 	font-size: 0;
@@ -711,6 +712,14 @@ button.exit{
 	cursor: pointer;
 	width: 148px;
 	float: right;
+}
+.product-price{
+	font-family: Myriad Pro;
+	font-weight: bold;
+	font-size: 24px;
+	float: left;
+	margin: 0;
+	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 2590px) and (min-width: 1301px){

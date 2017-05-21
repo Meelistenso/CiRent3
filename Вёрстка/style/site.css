@@ -1,4 +1,4 @@
-body,div,ul,li,button,input,span,h1,p,img{
+body,div,ul,li,button,input,span,h1,p,img,a{
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0; 
@@ -90,6 +90,7 @@ main{
 	justify-content: space-between;
 	align-content: center;
 	min-height: 350px !important;
+	width: 100%;
 }
 	.main-category{
 		flex-basis: 30%;

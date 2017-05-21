@@ -1,25 +1,27 @@
 ﻿@model IEnumerable<CiRent.BL.Entities.MainPageCategoryModel>
+
+
+ <div class="main-category-holder">
+                                @foreach (var item in Model)
+                                {
+                                <a class="main-category" href="~/Home/Category/@item.IdOfCategory">
+                                        <img src="~/Images/Categories/@item.PhotoPath" alt="">
+                                        <div class="filter"></div>
+                                        <p class="main-category-description">
+                                            @item.NameOfCategory
+                                        </p>
+                                </a>
+                                }
+</div>
 <script>
     $(window).resize(function () {
         resetMainCategry();
     });
-
+    $(document).ready(function () {
+        resetMainCategry();
+    });
     function resetMainCategry() {
         var height = parseFloat(document.documentElement.clientHeight) - parseFloat($("header").css("height")) + "px";
         $(".main-category-holder").css("height", height);
     }
 </script>
-    @foreach (var item in Model)
-    {
-        <a href="~/Home/Category/@item.IdOfCategory">
-            <div class="main-category-holder">
-                <div class="main-category">
-                    <img src="~/Images/Categories/@item.PhotoPath" alt="">
-                    <div class="filter"></div>
-                    <p class="main-category-description">
-                        @item.NameOfCategory
-                    </p>
-                </div>
-            </div>
-        </a>
-    }

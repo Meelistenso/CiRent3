@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="ICiRentContext.cs" />
     <Compile Include="IRepositories\IGenericRepository.cs" />
+    <Compile Include="IRepositories\IRepositoryHolder.cs" />
     <Compile Include="IRepositories\IProductInOrderRepository.cs" />
     <Compile Include="IRepositories\IProductTypeRepository.cs" />
     <Compile Include="IRepositories\IProductTypeDictionaryRepository.cs" />

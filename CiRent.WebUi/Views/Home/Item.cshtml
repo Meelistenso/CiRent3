@@ -1,26 +1,26 @@
 ﻿@model CiRent.BL.Entities.ProductModel
 <div class="product-page">
     <div class="product-info">
-        <h4 class="product-name">Product name</h4>
+        <h4 class="product-name">@Model.NameOfItem</h4>
         <div class="product-container">
             <div class="product-left">
-                <img class="product-img" src="img/camera.jpg" alt="">
+                <img class="product-img" src="~/Images/@Model.PhotoPath" alt="">
             </div>
             <div class="product-right">
                 <form class="add-to-cart-form">
                     <h3 class="add-to-cart-label">
-                        Select rent period</h5>
+                        Select rent period</h3>
                         <span class="rent-label">Rent beginning:</span>
                         <input class="rent-date" type="date" name="">
                         <span class="rent-label">Rent ending:</span>
                         <input class="rent-date" type="date" name="">
                         <input type="submit" value="Add to cart" name="">
                 </form>
-                <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam qui totam doloremque harum quod, rem recusandae suscipit id sit quos iste, inventore ipsum sapiente provident vero doloribus cumque, corporis molestias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus praesentium ullam rem, perferendis animi dolores, provident nesciunt iusto expedita, ad ut, sit necessitatibus totam tenetur esse nemo. Provident, assumenda voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quaerat non iste quod debitis eligendi minima consequatur delectus. Fugiat quasi cupiditate, nemo magnam necessitatibus sit minus nihil iusto dolorem numquam.</p>
+                <p class="product-description">@Model.Description</p>
             </div>
         </div>
     </div>
-    <div class="see-also-holder accordion-container">
+    @*<div class="see-also-holder accordion-container">
 
 
         <div class="set">
@@ -105,5 +105,5 @@
         </div><!-- set -->
 
 
-    </div>
+    </div>*@
 </div>

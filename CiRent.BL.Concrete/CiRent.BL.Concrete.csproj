@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductMapper.cs" />
     <Compile Include="ProductsMapper.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +70,14 @@
     <ProjectReference Include="..\CiRent.BL.Entities\CiRent.BL.Entities.csproj">
       <Project>{2A777979-BBE1-47F4-8E68-975447829F95}</Project>
       <Name>CiRent.BL.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CiRent.DAL.Abstract\CiRent.DAL.Abstract.csproj">
+      <Project>{A0907F97-9037-45F0-BD18-389E64836A28}</Project>
+      <Name>CiRent.DAL.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CiRent.DAL.Concrete.EF\CiRent.DAL.Concrete.EF.csproj">
+      <Project>{39044967-EA2E-4859-ADC0-785BA97608DD}</Project>
+      <Name>CiRent.DAL.Concrete.EF</Name>
     </ProjectReference>
     <ProjectReference Include="..\CiRent.Entity\CiRent.Entity.csproj">
       <Project>{CDC7B790-505D-4874-9EBA-C96EBB94E3D1}</Project>

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace CiRent.Entity
 {
 
-    [Table("tParamDictionary")]
+    [Table("tCategory")]
     public class Category
     {
         [Key]

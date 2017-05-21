@@ -25,7 +25,7 @@ namespace CiRent.Entity
         [Column("cProductQuantity")]
         public int ProductQuantity { get; set; }
 
-        [Column("cProductQuantity")]
+        [Column("сPhotoPath")]
         public string PhotoPath { get; set; }
 
         [Column("cDescription")]

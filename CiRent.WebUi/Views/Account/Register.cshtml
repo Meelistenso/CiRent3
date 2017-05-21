@@ -5,51 +5,25 @@
     ViewBag.Title = "Register";
 }
 
-<h2>Регистрация</h2>
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div>
-        <h4>Регистрация пользователя</h4>
-        <hr />
-        @Html.ValidationSummary(false)
-
-        <div>
-            Электронный адрес
-            <div>
-                @Html.EditorFor(model => model.Email)
-            </div>
-        </div>
-        <div>
-            Номер телефона
-            <div>
-                @Html.EditorFor(model => model.PhoneNumber)
-            </div>
-        </div>
-        
-        <div>
-            Пароль
-            <div>
-                @Html.EditorFor(model => model.Password)
-            </div>
-        </div>
-
-        <div>
-            Подтвердить пароль
-            <div>
-                @Html.EditorFor(model => model.PasswordConfirm)
-            </div>
-        </div>
-        
-
-        <div>
-            <div>
-                <input type="submit" value="Зарегистрировать" />
-            </div>
+    <div class="product-page">
+        <div class="form-holder">
+            @using (Html.BeginForm())
+            {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false)
+                <h3>Register</h3>
+                <span>Login</span>
+                <input type="text" name="UserName">
+                <span>Contact phone</span>
+                <input type="tel" name="PhoneNumber">
+                <span>Contact E-mail</span>
+                <input type="e-mail" name="Email">
+                <span>Password</span>
+                <input type="password" name="Password">
+                <span>Conform password</span>
+                <input type="password" name="PasswordConfirm">
+                <input type="submit" value="Send" name="">
+            }
         </div>
     </div>
-}
-}
+

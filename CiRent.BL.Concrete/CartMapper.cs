@@ -14,9 +14,9 @@ namespace CiRent.BL.Concrete
         {
             CartModel c = new CartModel();
             CartsMapper mapper = new CartsMapper();
-            c.CartsModel = mapper.
-            c.TotalPrice = c.CartsModel.Sum(p=>p.Price);
-            return res;
+           // c.CartsModel = mapper.
+            //c.TotalPrice = c.CartsModel.Sum(p=>p.Price);
+            return c;
         }
     }
 }

@@ -50,12 +50,17 @@ namespace CiRent.BL.Concrete
                     return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList());
             }
         }
-
         public async Task<ProductModel> BindProduct(int productId)
         {
             ProductMapper mapper = new ProductMapper();
             var res = await scope.ProductRepository.GetByIdAsync(productId);
             return mapper.EntityToModel(res);
+        }
+        public async Task<List<OrderModel>> BindOrder(string id)
+        {
+            OrderMapper mapper = new OrderMapper();
+            var order = await scope.OrderRepository.FetchByAsync(p=>p.IdUser==id);
+            return mapper.EntityToModel(order);
         }
 
     }

@@ -22,7 +22,7 @@ namespace CiRent.BL.Concrete
                 c.ProductName = item.Product.Name;
                 c.StartDate = item.RentBeginning;
                 c.EndDate = item.RentEnding;
-
+                res.Add(c);
             }
             return res;
         }

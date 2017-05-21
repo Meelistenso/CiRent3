@@ -17,7 +17,7 @@ namespace CiRent.BL.Concrete
             {
                 CartsModel c = new CartsModel();
                 c.Id = item.Id;
-                c.PhotoPath=item.
+                
             }
             return res;
         }

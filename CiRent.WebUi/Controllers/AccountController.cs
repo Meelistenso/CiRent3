@@ -33,7 +33,7 @@ namespace CiRent.WebUi.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { UserName = model.Email, Email = model.Email };
+                User user = new User { UserName = model.Email, Email = model.Email,PhoneNumber=model.PhoneNumber };
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

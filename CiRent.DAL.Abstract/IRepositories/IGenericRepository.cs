@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
-    public interface IGenericRepository<TEntity>
+    public interface IGenericRepository<TEntity> : IDisposable where TEntity:class
     {
         Task<TEntity> AddAsync(TEntity entity);
 

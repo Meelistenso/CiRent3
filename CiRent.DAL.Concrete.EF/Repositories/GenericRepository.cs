@@ -107,7 +107,11 @@ namespace CiRent.DAL.Concrete.EF.Repositories
             await Context.SaveChangesAsync();
         }
 
-        
-        
+        public void Dispose()
+        {
+            if (Context != null)
+                Context.Dispose();
+        }
+
     }
 }

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CiRent.BL.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -30,9 +32,11 @@ namespace CiRent.WebUi.Controllers
         {
             return View();
         }
-        public ActionResult Item(int id)
+        public async Task<ActionResult> Item(int id)
         {
-            return View();
+            DataHandler res = new DataHandler();
+            var result = await res.BindProduct(id);
+            return View(result);
         }
     }
 }

@@ -16,10 +16,14 @@ namespace CiRent.BL.Concrete
             foreach (var item in entity)
             {
                 ProductsModel pm = new ProductsModel();
-                pm.BigPrice = (int)item.Price;
-                pm.SmallPrice = (int)(item.Price - pm.BigPrice)*pm.BigPrice.ToString().Length;
-                pm.PhotoPath=item.ProductTypes
+                    pm.BigPrice = (int)item.Price;
+                    pm.SmallPrice = (int)(item.Price - pm.BigPrice) * pm.BigPrice.ToString().Length;
+                    pm.PhotoPath = item.PhotoPath;
+                    pm.NameOfItem = item.Name;
+                    pm.IdOfItem = item.Id;
+                p.Add(pm);
             }
+            return p;
         }
     }
 }

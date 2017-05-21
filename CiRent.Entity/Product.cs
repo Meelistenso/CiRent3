@@ -13,8 +13,7 @@ namespace CiRent.Entity
     {
         public Product()
         {
-            ProductTypes = new HashSet<ProductType>();
-            ProductInOrders = new HashSet<ProductInOrder>();
+            ProductInOrders = new HashSet<ProductsInOrder>();
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,7 +24,20 @@ namespace CiRent.Entity
         public decimal Price { get; set; }
         [Column("cProductQuantity")]
         public int ProductQuantity { get; set; }
-        public virtual ICollection<ProductType> ProductTypes { get; set; }
-        public virtual ICollection<ProductInOrder> ProductInOrders { get; set; }
+
+        [Column("cProductQuantity")]
+        public string PhotoPath { get; set; }
+
+        [Column("cDescription")]
+        public string Description { get; set; }
+
+        [Column("cName")]
+        public string Name { get; set; }
+
+        public int IdCategory { get; set; }
+        [ForeignKey("IdCategory")]
+        public virtual Category Category { get; set; }
+        public virtual EnumValue EnumValue { get;  set; }
+        public virtual ICollection<ProductsInOrder> ProductInOrders { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
-    public class ParamDictionaryRepository : GenericRepository<ParamDictionary>, IParamDictionaryRepository
+    public class ParamDictionaryRepository : GenericRepository<Category>, IParamDictionaryRepository
     {
         public ParamDictionaryRepository(ICiRentContext context) : base(context)
         {

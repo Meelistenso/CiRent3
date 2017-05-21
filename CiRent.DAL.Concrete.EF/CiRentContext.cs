@@ -22,11 +22,11 @@ namespace CiRent.DAL.Concrete.EF
          
        public IDbSet<Product> Product { get; set; }
        public IDbSet<Order> Order { get; set; }
-       public IDbSet<ParamDictionary> ParamDictionary { get; set; }
-       public IDbSet<ProductInOrder> ProductInOrder { get; set; }
-       public IDbSet<ProductType> ProductType { get; set; }
-       public IDbSet<ProductTypeDictionary> ProductTypeDictionary { get; set; }
-       public IDbSet<ProductValue> ProductValue { get; set; }
+       public IDbSet<Category> ParamDictionary { get; set; }
+       public IDbSet<ProductsInOrder> ProductInOrder { get; set; }
+       //public IDbSet<ProductType> ProductType { get; set; }
+       public IDbSet<EnumType> EnumType { get; set; }
+       public IDbSet<EnumValue> EnumValue { get; set; }
 
         public IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {

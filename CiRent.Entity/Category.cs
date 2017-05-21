@@ -11,7 +11,7 @@ namespace CiRent.Entity
 {
 
     [Table("tParamDictionary")]
-    public class ParamDictionary
+    public class Category
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -21,14 +21,14 @@ namespace CiRent.Entity
         [Column("cName")]
         public string Name { get; set; }
 
-        [Column("cIdType")]
-        public int IdType { get; set; }
-        [ForeignKey("IdType")]
-        public virtual ProductTypeDictionary ProductTypeDictionary { get; set; }
+        //[Column("cIdType")]
+        //public int IdType { get; set; }
+        //[ForeignKey("IdType")]
+        //public virtual ProductTypeDictionary ProductTypeDictionary { get; set; }
 
         [Column("cChildId")]
         public int ParamId { get; set; }
         [ForeignKey("ParamId")]
-        public virtual ICollection<ParamDictionary> Child { get; set; }
+        public virtual ICollection<Category> Child { get; set; }
     }
 }

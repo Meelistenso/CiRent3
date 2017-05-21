@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace CiRent.Entity
 {
-    [Table("tProductTypeDictionary")]
-    public class ProductTypeDictionary
+    [Table("tEnumValue")]
+    public class EnumValue
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("cId")]
         public int Id { get; set; }
 
-        [Column("cProductTypeValue")]
-        public int Type { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
-        public ICollection<ParamDictionary> Types { get; set; }
+        [Column("cEnumValue")]
+        public string EValue { get; set; }
     }
 }

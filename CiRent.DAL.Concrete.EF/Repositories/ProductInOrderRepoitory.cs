@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
-    public class ProductInOrderRepository : GenericRepository<ProductInOrder>, IProductInOrderRepository
+    public class ProductInOrderRepository : GenericRepository<ProductsInOrder>, IProductInOrderRepository
     {
         public ProductInOrderRepository(ICiRentContext context) : base(context)
         {

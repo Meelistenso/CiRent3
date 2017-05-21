@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
-    public interface IProductInOrderRepository : IGenericRepository<ProductInOrder>
+    public interface IProductInOrderRepository : IGenericRepository<ProductsInOrder>
     {
     }
 }

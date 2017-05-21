@@ -58,12 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Order.cs" />
-    <Compile Include="ParamDictionary.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="ProductInOrder.cs" />
-    <Compile Include="ProductType.cs" />
-    <Compile Include="ProductTypeDictionary.cs" />
-    <Compile Include="ProductValue.cs" />
+    <Compile Include="ProductsInOrder.cs" />
+    <Compile Include="EnumType.cs" />
+    <Compile Include="EnumValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="User.cs" />

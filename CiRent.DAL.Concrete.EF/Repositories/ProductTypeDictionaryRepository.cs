@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Concrete.EF.Repositories
 {
-    public class ProductTypeDictionaryRepository : GenericRepository<ProductTypeDictionary>, IProductTypeDictionaryRepository
+    public class ProductTypeDictionaryRepository : GenericRepository<EnumType>, IProductTypeDictionaryRepository
     {
         public ProductTypeDictionaryRepository(ICiRentContext context) : base(context)
         {

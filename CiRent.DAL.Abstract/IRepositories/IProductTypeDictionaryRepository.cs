@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
-    public interface IProductTypeDictionaryRepository : IGenericRepository<ProductTypeDictionary>
+    public interface IProductTypeDictionaryRepository : IGenericRepository<EnumType>
     {
     }
 }

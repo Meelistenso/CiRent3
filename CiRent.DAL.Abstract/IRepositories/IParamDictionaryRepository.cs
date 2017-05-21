@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CiRent.DAL.Abstract.IRepositories
 {
-    public interface IParamDictionaryRepository : IGenericRepository<ParamDictionary>
+    public interface IParamDictionaryRepository : IGenericRepository<Category>
     {
     }
 }

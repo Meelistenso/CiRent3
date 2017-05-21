@@ -13,11 +13,10 @@ namespace CiRent.DAL.Abstract
     {
         IDbSet<Product> Product { get; set; }
         IDbSet<Order> Order { get; set; }
-        IDbSet<ParamDictionary> ParamDictionary { get; set; }
-        IDbSet<ProductInOrder> ProductInOrder { get; set; }
-        IDbSet<ProductType> ProductType { get; set; }
-        IDbSet<ProductTypeDictionary> ProductTypeDictionary { get; set; }
-        IDbSet<ProductValue> ProductValue { get; set; }
+        IDbSet<Category> ParamDictionary { get; set; }
+        IDbSet<ProductsInOrder> ProductInOrder { get; set; }
+        IDbSet<EnumType> EnumType { get; set; }
+        IDbSet<EnumValue> EnumValue { get; set; }
 
         IDbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbEntityEntry Entry(object entity);

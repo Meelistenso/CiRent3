@@ -11,9 +11,11 @@ namespace CiRent.WebUi.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            DataHandler scope = new DataHandler();
+            var res = await scope.BindMainCategories();
+            return View(res);
         }
 
         public ActionResult About()
@@ -29,20 +31,37 @@ namespace CiRent.WebUi.Controllers
 
             return View();
         }
-        
-        public async Task<ActionResult> Category(int id,string page,string sorted)
+        //public async Task<ActionResult> Category(int id)
+        //{
+        //    DataHandler res = new DataHandler();
+        //    var result= await res.BindProducts(id);
+        //    return View(result);
+        //}
+        public async Task<ActionResult> Category(int id,int? page,string sorted)
         {
+            ViewData["Head"] = id;
             DataHandler res = new DataHandler();
             List<ProductsModel> result;
-            if (page!="") {
-                 result = await res.BindProducts(id, int.Parse(page),sorted);
+            
+            if (page!=null) {
+                 result = await res.BindProducts(id,(int)page,sorted);
+            }
+            else if(sorted!=null) {
+                result = await res.BindProducts(id,sorted);
             }
             else
             {
-                 result = await res.BindProducts(id,sorted);
+               result = await res.BindProducts(id);
             }
             
             return View("Category",result);
+        }
+        public async Task<ActionResult> Item(int id)
+        {
+            DataHandler res = new DataHandler();
+            var result = await res.BindProduct(id);
+            return View(result);
+
         }
     }
 }

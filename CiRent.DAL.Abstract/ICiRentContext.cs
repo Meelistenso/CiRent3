@@ -15,8 +15,6 @@ namespace CiRent.DAL.Abstract
         IDbSet<Order> Order { get; set; }
         IDbSet<Category> ParamDictionary { get; set; }
         IDbSet<ProductsInOrder> ProductInOrder { get; set; }
-        IDbSet<EnumType> EnumType { get; set; }
-        IDbSet<EnumValue> EnumValue { get; set; }
 
         IDbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbEntityEntry Entry(object entity);

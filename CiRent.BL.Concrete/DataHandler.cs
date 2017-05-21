@@ -13,7 +13,11 @@ namespace CiRent.BL.Concrete
 {
     public class DataHandler
     {
-        public readonly IRepositoryHolder scope=new RepositoryHolder();
+        private readonly IRepositoryHolder scope;
+        public DataHandler()
+        {
+            scope= new RepositoryHolder();
+        }
 
         public async Task<List<ProductsModel>> BindProducts(int categoryId,string sorted)
         {
@@ -35,6 +39,12 @@ namespace CiRent.BL.Concrete
             ProductsMapper mapper = new ProductsMapper();
             var res = await scope.ProductRepository.FetchByAsync(p => p.IdCategory == categoryId);
             return mapper.EntityToModel(res.Skip(page * 12).Take(12).ToList());
+        }
+        public async Task<List<ProductsModel>> BindProducts(int ParentCategoryId)
+        {
+            ProductsMapper mapper = new ProductsMapper();
+            var res = await scope.CategoryRepository.FetchByAsync(p=>p.ParentId == ParentCategoryId);
+            return mapper.EntityToModel(res.Take(12).ToList());
         }
         public async Task<List<ProductsModel>> BindProducts(int categoryId, int page, string orderby)
         {
@@ -61,6 +71,18 @@ namespace CiRent.BL.Concrete
             OrderMapper mapper = new OrderMapper();
             var order = await scope.OrderRepository.FetchByAsync(p=>p.IdUser==id);
             return mapper.EntityToModel(order);
+        }
+        public async Task<List<MainPageCategoryModel>> BindMainCategories()
+        {
+            MainPageCategoryMapper mapper = new MainPageCategoryMapper();
+            var order = await scope.CategoryRepository.FetchAsync();
+            return mapper.EntityToModel(order);
+        }
+        public async Task<List<SidebarCategoriesModel>> BindSideBarCategories(int id)
+        {
+            SidebarCategoriesMapper mapper = new SidebarCategoriesMapper();
+            var order = await scope.CategoryRepository.FetchByAsync(p=>p.Id==id);
+            return mapper.EntityToModel(order.FirstOrDefault());
         }
 
     }

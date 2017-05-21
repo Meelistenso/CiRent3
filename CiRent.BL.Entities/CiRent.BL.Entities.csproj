@@ -68,6 +68,7 @@
     <Compile Include="CategoriesSideBarModel.cs" />
     <Compile Include="MainPageCategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SidebarCategoriesModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

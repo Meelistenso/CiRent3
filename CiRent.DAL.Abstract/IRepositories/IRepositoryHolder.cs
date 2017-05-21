@@ -17,8 +17,6 @@ namespace CiRent.DAL.Abstract.IRepositories
         IOrderRepository OrderRepository { get; }
         IProductInOrderRepository ProductInOrderRepository { get; }
         ICategoryRepository CategoryRepository { get; }
-        IEnumTypeRepository EnumTypeRepository { get; }
-        IEnumValueRepository EnumValueRepository { get; }
 
         void SaveChanges();
 

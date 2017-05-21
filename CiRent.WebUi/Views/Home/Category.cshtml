@@ -1,16 +1,5 @@
 ﻿@model IEnumerable<CiRent.BL.Entities.ProductsModel>
-<div class="sidebar">
-    <button id="sort_by_price" class="sort sel-down"><span>Sort by price</span><img src="img/triangle.svg" alt=""></button>
-
-    <button id="sort_by_name" class="sort"><span>Sort by name</span><img src="img/triangle.svg" alt=""></button>
-
-    <ul class="categories">
-        <li class="category">Category category<img src="img/checked.svg" alt=""></li>
-        <li class="category">Category category<img src="img/checked.svg" alt=""></li>
-        <li class="category">Category category<img src="" alt=""></li>
-        <li class="category">Category category<img src="img/checked.svg" alt=""></li>
-    </ul>
-</div>
+@{ Html.RenderAction("_Categories", "Partial", new { id= ViewData["Head"] });}
 <div class="product-list">
     @foreach (var item in Model)
     {

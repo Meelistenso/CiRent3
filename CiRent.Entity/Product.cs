@@ -37,7 +37,6 @@ namespace CiRent.Entity
         public int IdCategory { get; set; }
         [ForeignKey("IdCategory")]
         public virtual Category Category { get; set; }
-        public virtual EnumValue EnumValue { get;  set; }
         public virtual ICollection<ProductsInOrder> ProductInOrders { get; set; }
     }
 }

@@ -25,5 +25,23 @@ namespace CiRent.BL.Concrete
             }
             return p;
         }
+        public List<ProductsModel> EntityToModel(List<Category> entity)
+        {
+            List<ProductsModel> p = new List<ProductsModel>();
+            foreach (var item in entity)
+            {
+                foreach (var item2 in item.Products)
+                {
+                    ProductsModel pm = new ProductsModel();
+                    pm.BigPrice = (int)item2.Price;
+                    pm.SmallPrice = (int)(((item2.Price) - pm.BigPrice) * 100);
+                    pm.PhotoPath = item2.PhotoPath;
+                    pm.NameOfItem = item2.Name;
+                    pm.IdOfItem = item2.Id;
+                    p.Add(pm);
+                }
+            }
+            return p;
+        }
     }
 }

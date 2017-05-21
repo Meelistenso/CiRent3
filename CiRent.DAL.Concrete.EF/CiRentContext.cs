@@ -24,9 +24,6 @@ namespace CiRent.DAL.Concrete.EF
        public IDbSet<Order> Order { get; set; }
        public IDbSet<Category> ParamDictionary { get; set; }
        public IDbSet<ProductsInOrder> ProductInOrder { get; set; }
-       //public IDbSet<ProductType> ProductType { get; set; }
-       public IDbSet<EnumType> EnumType { get; set; }
-       public IDbSet<EnumValue> EnumValue { get; set; }
 
         public IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {

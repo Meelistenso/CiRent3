@@ -61,8 +61,6 @@
     <Compile Include="IRepositories\IGenericRepository.cs" />
     <Compile Include="IRepositories\IRepositoryHolder.cs" />
     <Compile Include="IRepositories\IProductInOrderRepository.cs" />
-    <Compile Include="IRepositories\IEnumTypeRepository.cs" />
-    <Compile Include="IRepositories\IEnumValueRepository.cs" />
     <Compile Include="IRepositories\ICategoryRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="IRepositories\IRoleRepository.cs" />

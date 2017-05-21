@@ -64,8 +64,6 @@
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\RepositoryHolder.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
-    <Compile Include="Repositories\EnumValueRepository.cs" />
-    <Compile Include="Repositories\EnumTypeRepository.cs" />
     <Compile Include="Repositories\ProductInOrderRepoitory.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />

@@ -59,12 +59,14 @@
   <ItemGroup>
     <Compile Include="CartMapper.cs" />
     <Compile Include="CartsMapper.cs" />
+    <Compile Include="MainPageCategoryMapper.cs" />
     <Compile Include="OrderMapper.cs" />
     <Compile Include="OrdersMapper.cs" />
     <Compile Include="ProductMapper.cs" />
     <Compile Include="ProductsMapper.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SidebarCategoriesMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -17,8 +17,6 @@ namespace CiRent.DAL.Concrete.EF.Repositories
         IOrderRepository _orderRepository;
         IProductInOrderRepository _productInOrderRepository;
         ICategoryRepository _categoryRepository;
-        IEnumTypeRepository _enumTypeRepository;
-        IEnumValueRepository _enumValueRepository;
 
         public RepositoryHolder()
         {
@@ -39,6 +37,15 @@ namespace CiRent.DAL.Concrete.EF.Repositories
                 if (_productRepository == null)
                     _productRepository = new ProductRepository(_context);
                 return _productRepository;
+            }
+        }
+        public ICategoryRepository CategoryRepository
+        {
+            get
+            {
+                if (_categoryRepository == null)
+                    _categoryRepository = new CategoryRepository(_context);
+                return _categoryRepository;
             }
         }
         public IUserRepository UserRepository
@@ -77,33 +84,8 @@ namespace CiRent.DAL.Concrete.EF.Repositories
                 return _productInOrderRepository;
             }
         }
-        public ICategoryRepository CategoryRepository
-        {
-            get
-            {
-                if (_orderRepository == null)
-                    _orderRepository = new OrderRepository(_context);
-                return _categoryRepository;
-            }
-        }
-        public IEnumTypeRepository EnumTypeRepository
-        {
-            get
-            {
-                if (_enumTypeRepository == null)
-                    _enumTypeRepository = new EnumTypeRepository(_context);
-                return _enumTypeRepository;
-            }
-        }
-        public IEnumValueRepository EnumValueRepository
-        {
-            get
-            {
-                if (_enumValueRepository == null)
-                    _enumValueRepository = new EnumValueRepository(_context);
-                return _enumValueRepository;
-            }
-        }
+       
+        
         public void SaveChanges()
         {
             _context.SaveChanges();
@@ -130,14 +112,6 @@ namespace CiRent.DAL.Concrete.EF.Repositories
             if (_roleRepository != null)
             {
                 _roleRepository.Dispose();
-            }
-            if (_enumTypeRepository != null)
-            {
-                _enumTypeRepository.Dispose();
-            }
-            if (_enumValueRepository != null)
-            {
-                _enumValueRepository.Dispose();
             }
             if (_categoryRepository != null)
             {

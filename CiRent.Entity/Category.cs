@@ -17,18 +17,17 @@ namespace CiRent.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("cId")]
         public int Id { get; set; }
-
+        [Column("cPhotoPath")]
+        public string PhotoPath { get; set; }
         [Column("cName")]
         public string Name { get; set; }
+        
+        [Column("cParentId")]
+        public int? ParentId { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
-        //[Column("cIdType")]
-        //public int IdType { get; set; }
-        //[ForeignKey("IdType")]
-        //public virtual ProductTypeDictionary ProductTypeDictionary { get; set; }
-
-        [Column("cParamId")]
-        public int? ParamId { get; set; }
-        [ForeignKey("ParamId")]
+        [ForeignKey("ParentId")]
+        public virtual Category Parent { get; set; }
         public virtual ICollection<Category> Child { get; set; }
     }
 }

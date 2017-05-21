@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CiRent.BL.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -17,9 +19,11 @@ namespace CiRent.WebUi.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult _Categories()
+        public async Task<PartialViewResult> _Categories(int id)
         {
-            return PartialView();
+            DataHandler c = new DataHandler();
+            var res= await c.BindSideBarCategories(id);
+            return PartialView(res);
         }
     }
 }
